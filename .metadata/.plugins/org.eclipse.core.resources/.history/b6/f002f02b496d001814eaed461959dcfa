@@ -1,0 +1,37 @@
+package SeleniumPractice;
+import static org.testng.Assert.assertEquals;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class LaunchFF {
+	WebDriver driver;
+	
+	@Test(description="Launching the Transfora")
+	public void launch() throws Exception {
+	
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\gmaddirala\\Downloads\\Selenium files\\geckodriver-v0.17.0-win64\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.get("http://10.138.75.75:8888/account/login");
+		FileInputStream fi= new FileInputStream("C:\\Users\\gmaddirala\\eclipse-workspace\\SeleniumEx\\Test Data.xlsx");
+		//XSSFWorkbook wb=new XSSFWorkbook(fi);
+		XSSFWorkbook wb=new XSSFWorkbook(fi);
+		XSSFSheet ws= wb.getSheet("Sheet1");
+			Row r=ws.getRow(1);
+		driver.findElement(By.name("email")).sendKeys(r.getCell(0).getStringCellValue());
+		driver.findElement(By.name("password")).sendKeys(r.getCell(1).getStringCellValue());
+		wb.close();
+	}
+	
+	public void login() {
+		//driver.findElement(By.name("email")).sendKeys();
+		assertEquals(driver.getTitle(), "Inbox");
+	}
+}

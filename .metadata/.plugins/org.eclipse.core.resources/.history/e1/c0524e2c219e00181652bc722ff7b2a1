@@ -1,0 +1,19 @@
+package com.Testjava;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class BasicAuth_eForms {
+	WebDriver driver;
+	
+	@Test
+	
+	public void loginToeForms() throws InterruptedException{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\gmaddirala\\Downloads\\Selenium files\\chromedriver_win32\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("http://eforms.agility.com/");
+		Thread.sleep(5000);
+		
+	}
+}

@@ -1,0 +1,21 @@
+package BasicEx;
+
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class Extent {
+	ExtentReports reports;
+	ExtentTest logger;
+	
+	@Test
+	public void open(){
+		reports= new ExtentReports("C:\\Geetha(selenium)\\eclipse-workspace\\JAVA_Examples\\src\\BasicEx\\extent.html");
+		logger=reports.startTest("verify the browser");
+		logger.log(LogStatus.INFO,"browser started");
+		
+		
+	}
+}
