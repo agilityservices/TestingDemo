@@ -57,5 +57,6 @@
 	<classpathentry kind="lib" path="C:/Users/gmaddirala/Downloads/Selenium files/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
 	<classpathentry kind="lib" path="C:/Users/gmaddirala/Downloads/Selenium files/poi-bin-3.16-20170419/poi-3.16/ooxml-lib/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/gmaddirala/Downloads/Selenium files/poi-bin-3.16-20170419/poi-3.16/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gmaddirala/Downloads/eclipse-jee-neon-3-win32-x86_64/eclipse/plugins/org.testng.eclipse_6.14.0.201802161500.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

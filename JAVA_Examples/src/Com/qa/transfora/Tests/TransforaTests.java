@@ -24,7 +24,7 @@ import Com.qa.transfora.Testutil.Utility;
 
 public class TransforaTests extends TestBase {
 	
-	static String TestData="C:\\Geetha(selenium)\\eclipse-workspace\\JAVA_Examples\\src\\Com\\qa\\transfora\\TestData.xlsx";
+	static String TestData=".\\src\\Com\\qa\\transfora\\TestData.xlsx";
 	
 	
 	@BeforeMethod
